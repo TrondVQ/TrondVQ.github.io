@@ -28,6 +28,12 @@ jobs:
         run: echo "Hello, $FIRST_Name, ${{secrets.PASSWORD}}"
         env:
           FIRST_Name: Trond
+      - name: Send email
+        uses: dawidd6/action-send-mail@v3.5.0
+      - name: Profile Readme Development Stats
+        uses: anmol098/waka-readme-stats@V3
+
+
     
   deploy:
     needs: build
