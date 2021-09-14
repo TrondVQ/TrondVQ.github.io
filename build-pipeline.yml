@@ -24,6 +24,10 @@ jobs:
         run: npm run lint:ts
       - name: Run styles lint and format check
         run: npm run lint:css
+      - name: Hello
+        run: echo "Hello, $FIRST_Name"
+        env:
+          FIRST_Name: Trond
     
   deploy:
     needs: build
